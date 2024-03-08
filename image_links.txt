@@ -1,0 +1,6 @@
+--gradient-bg: 'https://zty.pe/media/background/gradient.png'
+--main-bg: 'https://zty.pe/media/background/page.png'
+--canon: 'https://zty.pe/media/sprites/ship.png'
+--blast-gif: "https://media.tenor.com/j-ixpElDGOYAAAAi/explode-boom.gif"
+--explosion-gif: 'https://media.tenor.com/ptNG8DQFPD4AAAAi/explotion-explode.gif'
+--game-over-explosion: 'https://i.gifer.com/1lMg.gif'

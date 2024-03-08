@@ -1,0 +1,198 @@
+*{
+    padding: 0%;  
+    margin: 0%;
+}
+.main{
+    width: 100%;
+    height: 100lvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://zty.pe/media/background/page.png');
+    overflow: hidden;
+}
+.card {
+    background-image: url('https://zty.pe/media/background/gradient.png');
+    width: 450px;
+    height: 600px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 40px 20px;
+    border-radius: 10px;
+}
+
+.new-game{
+    position: absolute;
+    width: 450px;
+    height: 600px;
+    font-size: large;
+    font-weight: 900;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    color: #0ff;
+    z-index: 500;
+}
+.difficulty{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10%;
+    flex-wrap: wrap;
+    border: 5px solid aqua;
+    padding: 5% 5%;
+    margin: 5%;
+
+}
+.new-game h2{
+    margin: 0% 5% 5% 5%;
+}
+
+.but{
+    padding: 5px 20px; 
+    border: 2px solid aqua;
+    border-radius: 5px;
+    color: #0ff;
+    background-color: black;
+    font-size: 1.5rem;
+}
+.but:hover{
+    color: black;
+    background-color: #0ff;
+    border: 2px solid black;
+    box-shadow: 0px 0px 20px 2px aqua;
+}
+.active{
+    color: black;
+    background-color: #0ff;
+    border: 2px solid black;
+    box-shadow: 0px 0px 20px 2px #0ff;
+}
+.lose-card{
+    background-image: url('https://imgs.search.brave.com/Z0wGM508yQdwRCdONNXtNhbkWraeSJ59XAMVfkvTAEo/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/dGV4dHN0dWRpby5j/b20vb3V0cHV0L3Nh/bXBsZS9ub3JtYWwv/NC85LzQvNi9sb3Nl/LWxvZ28tOTQxLTY0/OTQucG5n');
+    width: 450px;
+    height: 700px;
+    position: relative;
+    object-fit: cover;
+    object-position: center;
+    top: -10px;
+    display: none;
+    box-shadow: rgba(26, 26, 26, 0.2) 20px 7px 29px 0px;
+}
+    
+.card2{
+    position: absolute;
+    width: 450px;
+    height: 600px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 15px 15px; /* Adjust grid size as needed */
+    animation: moveGrid 6s linear infinite; /* Adjust animation duration as needed */
+    object-fit: fill;
+    object-position: center;
+    border-radius: 10px;
+
+    /* display: none; */
+}
+
+@keyframes moveGrid {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 90%;
+    }
+}
+
+
+.word{
+    display: inline;
+    justify-content: center; 
+    align-items: center;
+    /* background-color: aqua; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 50;
+    animation-name: word_ani;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    overflow: hidden;
+}
+.explosion{
+    width: 50px;
+    height: 50px;
+}
+@keyframes word_ani {
+    form{
+        transform: translateY(0px);
+    }
+    to{
+        left: 150px;
+        transform: translateY(550px) ;
+    }
+}
+.text{
+    width: auto;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    display: inline;
+
+}
+.target {
+    width: 25px; 
+    height: 25px;
+    object-fit: cover;
+    display: inline-block;
+}
+.target img{
+    width: 25px; 
+    height: 25px;
+}
+
+.canon{
+    width: 24px;
+    height: 24px;
+    /* background-color: aqua; */
+    overflow: hidden;
+    position: absolute;
+    bottom: 40px;
+    right: 50%;
+    z-index: 100;
+    display: none;
+}
+
+.blue-bar{
+    width: 100%;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 100px;
+    box-shadow: 5px 0px 8px 5px aqua; 
+    background-image: url('https://zty.pe/media/ui/bar-blue.png');
+    display: none;
+}
+
+.laser{
+    width: 4px;
+    height: 4px;
+    background-color: #0ff; 
+    overflow: hidden;
+    position: absolute;
+    bottom: 40px;
+    right: 50%;
+    z-index: 100;
+    transition: all 0.3s ease;
+    background-size: contain;
+    box-shadow: 0px 0px 10px 5px #0ff;
+}
+
+
